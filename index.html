@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(92, 201, 255);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: auto;
+            margin-top: 30vh;
+            width: 500px;
+        }
+
+        .btn {
+            background-color: yellow;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px 25px;
+            margin: 12px;
+            cursor: pointer;
+            position: relative;
+            left: 0;
+            right: 0;
+            transition: all .8s ease;
+        }
+
+        .btn:hover {
+            background-color: rgb(15, 255, 103);
+        }
+
+        .gif img {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 id="h">Do you want to date Me?</h1>
+        <div class="gif"><img
+                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHAwdjR0aDVoMTZ3ejZ1anFibGF1bmx1bWNoZ2JtNHExN3Q5NHQ4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IxmmhNo2MI8r9PrgE3/giphy.gif">
+        </div>
+        <div class="button">
+            <button class="btn" id="btn1">Yes!</button>
+            <button class="btn" id="btn">No!</button>
+        </div>
+    </div>
+</body>
+<script>
+    let audio;
+    btn1.addEventListener("click", () => {
+        document.querySelector(".gif>img").src = document.querySelector(".gif>img").src.replace("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHAwdjR0aDVoMTZ3ejZ1anFibGF1bmx1bWNoZ2JtNHExN3Q5NHQ4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IxmmhNo2MI8r9PrgE3/giphy.gif", "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHV3c2x0aWw2d3pjeWZyd2tvam0xbzgxa25vbXZmODQwbHlieXZmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oFRy3c4kmFYv0Me3Sg/giphy.gif");
+
+        audio = new Audio('me-tera.mp3');
+        audio.play();
+
+        btn.style.left = 0;
+        btn.style.right = 0;
+        btn.style.top = 0;
+        btn.style.bottom = 0;
+
+        h.innerHTML = "Yeeyy!"
+    })
+    btn.addEventListener("click", () => {
+        btn.style.left = Math.floor(Math.random() * 200) + "px";
+        btn.style.right = Math.floor(Math.random() * 200) + "px";
+        btn.style.top = Math.floor(Math.random() * 200) + "px";
+        btn.style.bottom = Math.floor(Math.random() * 200) + "px";
+
+        document.querySelector(".gif>img").src = document.querySelector(".gif>img").src.replace("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHV3c2x0aWw2d3pjeWZyd2tvam0xbzgxa25vbXZmODQwbHlieXZmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oFRy3c4kmFYv0Me3Sg/giphy.gif", "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHAwdjR0aDVoMTZ3ejZ1anFibGF1bmx1bWNoZ2JtNHExN3Q5NHQ4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IxmmhNo2MI8r9PrgE3/giphy.gif");
+
+        audio.pause();
+
+        h.innerHTML = "Do you want to date Me?"
+    })
+
+</script>
+
+</html>
