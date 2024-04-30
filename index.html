@@ -31,7 +31,7 @@
             border: 2px solid black;
             border-radius: 10px;
             padding: 5px 25px;
-            margin: 12px;
+            margin: 2px;
             cursor: pointer;
             position: relative;
             left: 0;
@@ -44,7 +44,7 @@
         }
 
         #btn1:hover {
-            background-color: rgb(250, 35, 35);
+            background-color: rgb(240, 92, 92);
         }
 
         .gif img {
@@ -62,7 +62,7 @@
     <div class="container">
         <div class="box">
 
-            <h1 id="h">Do you want to date Me?</h1>
+            <h2 id="h">Do you want to date Me?</h2>
             <div class="gif"><img
                     src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHAwdjR0aDVoMTZ3ejZ1anFibGF1bmx1bWNoZ2JtNHExN3Q5NHQ4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IxmmhNo2MI8r9PrgE3/giphy.gif">
             </div>
@@ -75,7 +75,7 @@
 </body>
 <script>
     let audio;
-    let arr = ["Please Cutie", "Please!", "Me click nahi hounga!", "Think again!"];
+    let arr = ["Please Cutie!", "Please!", "Me click nahi hounga!", "Think again!"];
     btn.addEventListener("click", () => {
         document.querySelector(".gif>img").src = document.querySelector(".gif>img").src.replace("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHAwdjR0aDVoMTZ3ejZ1anFibGF1bmx1bWNoZ2JtNHExN3Q5NHQ4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IxmmhNo2MI8r9PrgE3/giphy.gif", "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHV3c2x0aWw2d3pjeWZyd2tvam0xbzgxa25vbXZmODQwbHlieXZmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oFRy3c4kmFYv0Me3Sg/giphy.gif");
 
@@ -93,10 +93,10 @@
         }
     })
     btn1.addEventListener("click", () => {
-        btn1.style.left = Math.floor(Math.random() * 200) + "px";
-        btn1.style.right = Math.floor(Math.random() * 200) + "px";
-        btn1.style.top = Math.floor(Math.random() * 200) + "px";
-        btn1.style.bottom = Math.floor(Math.random() * 200) + "px";
+        btn1.style.left = Math.floor(Math.random() * 100) + "px";
+        btn1.style.right = Math.floor(Math.random() * 100) + "px";
+        btn1.style.top = Math.floor(Math.random() * 100) + "px";
+        btn1.style.bottom = Math.floor(Math.random() * 100) + "px";
         btn1.innerHTML = arr[Math.floor(Math.random() * 4)];
 
         document.querySelector(".gif>img").src = document.querySelector(".gif>img").src.replace("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHV3c2x0aWw2d3pjeWZyd2tvam0xbzgxa25vbXZmODQwbHlieXZmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oFRy3c4kmFYv0Me3Sg/giphy.gif", "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHAwdjR0aDVoMTZ3ejZ1anFibGF1bmx1bWNoZ2JtNHExN3Q5NHQ4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IxmmhNo2MI8r9PrgE3/giphy.gif");
